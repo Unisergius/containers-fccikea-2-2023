@@ -97,8 +97,24 @@ services:
       - redis
 ```
 
+This creates us a volume but we still need nodemon to detect changes and restart the server
+automatically in our browser. 
+
+for that we change the command instruction to this.
+
+```
+  command: sh -c 'npm init -y && npm i express redis nodemon && npx nodemon index.js'
+```
+this will instruct npm to install express, redis and nodemon and run index.js through nodemon
+
+Nodemon is a daemon that monitors our files and restarts the server everytime the files are 
+changed. Since we mounted a volume to our files, we don't need to restart our container
+everytime we have changes in our application.
+
 
 There's plenty more we can do. Connect databases, mailhog, cache.
 And then there's Kubernetes which is quite a load itself.
+
+
 
 I hope you guys liked this session, thank you for your time.
