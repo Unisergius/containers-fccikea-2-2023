@@ -2,6 +2,8 @@
 
 But can we set up a network of containers running together in a simple way?
 
+These instructions assume you already have [Docker Compose](https://docs.docker.com/compose/) installed (i.e. the `docker compose` sub-command is available), if not please follow the [instructions in the Docker Compose documentation](https://docs.docker.com/compose/install/).
+
 ## docker-compose.yml
 
 We can chain many services into a docker-compose.yml.
@@ -66,6 +68,11 @@ And in our index.js we're going to add a simple visit counter.
   });
   /* ... */
 ```
+
+Then bring up the the entire stack with `docker compose up`.
+
+If you have never built the containers they will be automatically built (or pulled).
+If you already built them and your code has changed you can force a rebuild with `docker compose build` or just use `docker compose up --build`.
 
 ### But I don't wanna restart my container everytime I change my app
 

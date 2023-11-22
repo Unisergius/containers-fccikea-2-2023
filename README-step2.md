@@ -53,6 +53,6 @@ a container with docker.
 ```docker build -t shenriques/stupidexample:1.0 .```
 
 
-```docker run -p 8000:8080 <container_id>```
+```docker run -p 8080:8080 <container_id>```
 
 
