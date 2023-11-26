@@ -35,7 +35,7 @@ This is a simple way of getting two images working together. One image
 is build from the previous Dockerfile we created. The other one is redis
 which needs to be downloaded from the docker hub if we don't have it yet.
 
-Now we need to add redis dependency to our composer.json 
+Now we need to add redis dependency to our package.json with `npm install redis` or:
 
 ```json
 
